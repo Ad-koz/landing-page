@@ -12,7 +12,7 @@ min-height: 100vh;
 display: flex;
 flex-direction: column;
 justify-content: flex-start;
-background: url(bg2.jpg)no-repeat;
+background: url(bg3.jpg)no-repeat;
 background-size: cover;
 background-position: center;
 }
@@ -25,11 +25,14 @@ header{
     justify-content: space-between;
     align-items: center;
 }
-
+#logo{
+    width: 40px;
+    height: 40px;
+}
 header .logo{
     position: relative;
-    color: #000;
-    font-size: 30px;
+    color: #23452B;
+    font-size: 20px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -51,7 +54,7 @@ header .navigation a:not(:last-child){
 }
 
 header .navigation a:hover{
-    background: #fff;
+    background: #F8E3C8 ;
 }
 .content{
     max-width: 650px;
@@ -59,7 +62,7 @@ header .navigation a:hover{
 }
 
 .content .info h2{
-color: #218CA2;
+color: #EFC997 ;
 font-size: 55px;
 text-transform: uppercase;
 font-weight: 800;
@@ -69,8 +72,8 @@ margin-bottom: 30px;
 }
 
 .content .info h2 span{
-    color: #fff;
-    font-size: 50px;
+    color: #F8E3C8 ;
+    font-size: 25px;
     font-weight: 600;
 }
 .content .info p{
@@ -80,7 +83,7 @@ margin-bottom: 30px;
 }
 .content .info-btn{
     color: #fff;
-    background: #218CA2;
+    background: #EFC997 ;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
@@ -90,7 +93,7 @@ margin-bottom: 30px;
     transition: 0.3s;
 }
 .content .info-btn:hover {
-    background: #19697A;
+    background: #709579 ;
 }
 .media-icons {
     display:flex;
@@ -101,7 +104,7 @@ margin-bottom: 30px;
 
 .media-icons a{
     position: relative;
-    color: #111;
+    color: #F8E3C8 ;
     font-size: 25px;
     transition: 0.3s;
     transition-property: transform;
@@ -118,6 +121,7 @@ label {
 }
 #check {
     z-index: 3;
+    display: none;
 }
 
 /*Responsive styles*/
@@ -142,11 +146,62 @@ label {
     #check:checked ~ header .navigation {
         z-index: 2;
         position: fixed;
-        background: rgba(42, 203, 238, 0.9);
+        background: #709579;
         top: 0;
         bottom: 0;
         left: 0;
         right: 0;
         display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+    #check:checked ~ header label .menu-btn{
+        display: none;
+    }
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .menu-btn{
+        position: absolute;
+
+    }
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+    }
+
+    .content .info h2{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .content .info h2 span{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: 14px;
+    }
+
+}
+@media (max-width: 560px) {
+    .content .info h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .content .info h2 span{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: 14px;
     }
 }
