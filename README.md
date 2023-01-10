@@ -1,1 +1,1 @@
-# land-page-garden
+Simple landing page project based on html and CSS
